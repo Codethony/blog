@@ -4433,3 +4433,577 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 53ms (Views: 42.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 12:25:12 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (2.8ms)
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts/13" for 127.0.0.1 at 2018-04-14 12:25:50 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts/13" for 127.0.0.1 at 2018-04-14 12:28:27 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 12:28:31 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (2.1ms)
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru/posts/13/edit" for 127.0.0.1 at 2018-04-14 12:28:57 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.5ms)
+  Rendered posts/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/ru/posts/13" for 127.0.0.1 at 2018-04-14 12:29:04 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DDqk+v8tBRQbF0QvNBgfeM29WN4bZ0L8CMXfV52zjCsk3dUbj3jBCw57hv6Je1OH0TdkqsIamNMCHDSOYE2Iyw==", "post"=>{"title"=>"Test", "sumary"=>"Test", "body"=>"<div>\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"</div>"}, "commit"=>"Изменить статью", "locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "posts" SET "body" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["body", "<div>\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"</div>"], ["updated_at", "2018-04-14 09:29:04.404898"], ["id", 13]]
+  [1m[35m (80.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/13
+Completed 302 Found in 89ms (ActiveRecord: 81.9ms)
+
+
+Started GET "/ru/posts/13" for 127.0.0.1 at 2018-04-14 12:29:04 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 12:29:13 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (2.6ms)
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts/13/edit" for 127.0.0.1 at 2018-04-14 12:29:16 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.8ms)
+  Rendered posts/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/ru/posts/13" for 127.0.0.1 at 2018-04-14 12:29:19 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RpLikCfW19wKfIXyxrO5nhHyALnd8O7HU3Msyy/6QlVudZNxV4MTwx8QRyN70PVhDXg8zQSNNOhZqscS0gRGtQ==", "post"=>{"title"=>"Test", "sumary"=>"Test", "body"=>"<div>\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"</div>"}, "commit"=>"Изменить статью", "locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/13
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/ru/posts/13" for 127.0.0.1 at 2018-04-14 12:29:19 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 12:29:24 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (2.2ms)
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 12:29:33 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (1.3ms)
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts/13/edit" for 127.0.0.1 at 2018-04-14 12:29:36 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.4ms)
+  Rendered posts/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ru/posts/13/edit" for 127.0.0.1 at 2018-04-14 12:58:16 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (25.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (39.3ms)
+  Rendered posts/edit.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 5273ms (Views: 5173.2ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 12:58:29 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (16.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (33.2ms)
+  Rendered posts/index.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 84ms (Views: 67.1ms | ActiveRecord: 16.2ms)
+
+
+Started DELETE "/ru/posts/13" for 127.0.0.1 at 2018-04-14 12:59:03 +0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Lp36YF5GZYEdxWP84yHkNsJmWwpgq23KhinDxogxaJ9fqyLyKR5xY73Q8K2Nt9C2L0zaEt1y1z/0S+lkM+4W+A==", "locale"=>"ru", "id"=>"13"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 13]]
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts
+Completed 302 Found in 24ms (ActiveRecord: 19.1ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 12:59:03 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2018-04-14 12:59:05 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.9ms)
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ru/posts" for 127.0.0.1 at 2018-04-14 13:01:23 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tSTNDFRCIRSvV1q6uCwvSEgW+18pSrZyPNxlY7TiWzQmBPIcrecpis66jBcPb59DRoAi4mMomE6eDSTQmhj1jg==", "post"=>{"title"=>"Test", "sumary"=>"Test", "body"=>"<div>usfuksukdfkshfukhsdufkhshduk</div>", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f1f26527348 @tempfile=#<Tempfile:/tmp/RackMultipart20180414-3690-1bu6gi4.jpg>, @original_filename="fly.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"fly.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Создать статью", "locale"=>"ru"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (33.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "sumary", "body", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Test"], ["sumary", "Test"], ["body", "<div>usfuksukdfkshfukhsdufkhshduk</div>"], ["created_at", "2018-04-14 10:01:24.748291"], ["updated_at", "2018-04-14 10:01:24.748291"], ["image", "fly.jpg"]]
+  [1m[35m (24.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/14
+Completed 302 Found in 1427ms (ActiveRecord: 58.8ms)
+
+
+Started GET "/ru/posts/14" for 127.0.0.1 at 2018-04-14 13:01:24 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 56ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 13:01:31 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (2.5ms)
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru/posts/14/edit" for 127.0.0.1 at 2018-04-14 13:01:35 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/ru/posts/14" for 127.0.0.1 at 2018-04-14 13:01:44 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ZO/80CH1BlCUW3OdJllkzo7TmpFwUcJErlZGEIp180qT8yPq718QwDchsIZy0rMfE0WqLm77aBq+Zezf4AMuw==", "post"=>{"title"=>"Test", "sumary"=>"adasd", "body"=>"<div>usfuksukdfkshfukhsdufkhshduk</div>"}, "commit"=>"Изменить статью", "locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "posts" SET "sumary" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["sumary", "adasd"], ["updated_at", "2018-04-14 10:01:44.698294"], ["id", 14]]
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/14
+Completed 302 Found in 32ms (ActiveRecord: 26.4ms)
+
+
+Started GET "/ru/posts/14" for 127.0.0.1 at 2018-04-14 13:01:44 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 13:01:48 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (2.0ms)
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts/14/edit" for 127.0.0.1 at 2018-04-14 13:01:54 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.4ms)
+  Rendered posts/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/ru/posts/14" for 127.0.0.1 at 2018-04-14 13:06:04 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ug+Py1diwrGT8uBxNFNGHU63Emvu52s2XkpE3AlgT/2N0/y3vFhq69F/C31ZAWlCCMFKqRKdwZ8mCop3NMmUiw==", "post"=>{"title"=>"Test", "sumary"=>"Краткое содержание", "body"=>"<pre>ГАМНОКОООООД</pre><div><br></div>", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f1f381c0c10 @tempfile=#<Tempfile:/tmp/RackMultipart20180414-3690-17xvm0p.jpg>, @original_filename="fly.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"fly.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Изменить статью", "locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "posts" SET "sumary" = $1, "body" = $2, "image" = $3, "updated_at" = $4 WHERE "posts"."id" = $5[0m  [["sumary", "Краткое содержание"], ["body", "<pre>ГАМНОКОООООД</pre><div><br></div>"], ["image", "fly.jpg"], ["updated_at", "2018-04-14 10:06:04.798300"], ["id", 14]]
+  [1m[35m (69.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/14
+Completed 302 Found in 255ms (ActiveRecord: 70.0ms)
+
+
+Started GET "/ru/posts/14" for 127.0.0.1 at 2018-04-14 13:06:04 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ru/posts/14" for 127.0.0.1 at 2018-04-14 13:07:21 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts/14/edit" for 127.0.0.1 at 2018-04-14 13:07:28 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.7ms)
+  Rendered posts/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts/14" for 127.0.0.1 at 2018-04-14 13:10:23 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 90ms (Views: 45.4ms | ActiveRecord: 25.8ms)
+
+
+Started DELETE "/ru/posts/14" for 127.0.0.1 at 2018-04-14 13:10:26 +0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+3AFt0yItDhL5AJ3EW+jTqVYCFT7XIruyPPx3S6uwwiKRt0lO9Cg2uvxkSZ/+ZfOSHKJTEaFMBu6kdt/lXG9bw==", "locale"=>"ru", "id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 14]]
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts
+Completed 302 Found in 22ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 13:10:26 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2018-04-14 13:10:28 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.7ms)
+  Rendered posts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ru/posts" for 127.0.0.1 at 2018-04-14 13:10:45 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HpjUVBlSqj+7AVPK+8AItCtn09aV2iOTYD1uD95X9AmNuOtE4PeiodrshWdMg7i/JfEKa9+4Da/C7C+88K1asw==", "post"=>{"title"=>"tEST", "sumary"=>"tEST", "body"=>"<div></div>"}, "commit"=>"Создать статью", "locale"=>"ru"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "sumary", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "tEST"], ["sumary", "tEST"], ["body", "<div></div>"], ["created_at", "2018-04-14 10:10:45.183314"], ["updated_at", "2018-04-14 10:10:45.183314"]]
+  [1m[35m (32.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/15
+Completed 302 Found in 39ms (ActiveRecord: 33.6ms)
+
+
+Started GET "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:10:45 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts/15/edit" for 127.0.0.1 at 2018-04-14 13:10:54 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.4ms)
+  Rendered posts/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 13:10:56 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (2.3ms)
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:10:57 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:11:52 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 1268ms (Views: 1216.8ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/ru/posts/15/edit" for 127.0.0.1 at 2018-04-14 13:11:56 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (24.4ms)
+  Rendered posts/edit.html.erb within layouts/application (178.9ms)
+Completed 200 OK in 259ms (Views: 242.0ms | ActiveRecord: 5.3ms)
+
+
+Started PATCH "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:13:12 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lA7AsxzOz/thd/4kohJXejr79kDHn9gkENuY+8O0TYeiJCf0hjkrR3e1yTyECgsmKvX8u/M0AyTSmyMSLZTFKQ==", "post"=>{"title"=>"tEST", "sumary"=>"tEST", "body"=>"<div>&lt;jszkudhaksudhukashdkuahsdhaukdahs<br><br></div>"}, "commit"=>"Изменить статью", "locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "posts" SET "body" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["body", "<div>&lt;jszkudhaksudhukashdkuahsdhaukdahs<br><br></div>"], ["updated_at", "2018-04-14 10:13:12.241821"], ["id", 15]]
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/15
+Completed 302 Found in 27ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:13:12 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru/posts/15/edit" for 127.0.0.1 at 2018-04-14 13:13:16 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.8ms)
+  Rendered posts/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:13:54 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zj3oXJF3XPiK56xLQBiqA2kUVdqIJz3AoNj0QEMkwvv4Fw8bC4C4RJwlm1NmAPZfeRpfIbyM5sBimE+prQRKVQ==", "post"=>{"title"=>"tEST", "sumary"=>"tEST", "body"=>"<h1><a href=\"https://www.facebook.com/profile.php?id=100017178671075\"><strong>Hello World</strong></a></h1>", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f47f5c52f58 @tempfile=#<Tempfile:/tmp/RackMultipart20180414-17512-1rlqxkk.jpg>, @original_filename="fly.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"fly.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Изменить статью", "locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "posts" SET "body" = $1, "image" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["body", "<h1><a href=\"https://www.facebook.com/profile.php?id=100017178671075\"><strong>Hello World</strong></a></h1>"], ["image", "fly.jpg"], ["updated_at", "2018-04-14 10:13:54.696840"], ["id", 15]]
+  [1m[35m (23.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/15
+Completed 302 Found in 231ms (ActiveRecord: 24.9ms)
+
+
+Started GET "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:13:54 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 13:14:51 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (2.7ms)
+  Rendered posts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (44.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(892336952976185220)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTags (20180414101641)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (543.3ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180414101641"]]
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTaggings (20180414101805)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (121.8ms)[0m  [1m[35mCREATE TABLE "taggings" ("id" bigserial primary key, "post_id" bigint, "tag_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_2c662e858e"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+, CONSTRAINT "fk_rails_9fcd2e236b"
+FOREIGN KEY ("tag_id")
+  REFERENCES "tags" ("id")
+)[0m
+  [1m[35m (45.9ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_post_id" ON "taggings"  ("post_id")[0m
+  [1m[35m (30.3ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_tag_id" ON "taggings"  ("tag_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180414101805"]]
+  [1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (45.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(892336952976185220)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ru/posts/15/edit" for 127.0.0.1 at 2018-04-14 13:36:46 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 15]]
+  Rendered posts/_form.html.erb (72.5ms)
+  Rendered posts/edit.html.erb within layouts/application (73.5ms)
+Completed 200 OK in 576ms (Views: 493.2ms | ActiveRecord: 7.8ms)
+
+
+Started PATCH "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:37:03 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCTkp9CFk9+BAS9p0BpJ5v5W9e4vmWuQVJCOFKlyhMKyDgPgSnJ3Y5fDGHH2AhW67lj/FRsysJCW0DX9R1IMbA==", "post"=>{"title"=>"tEST", "sumary"=>"tEST", "body"=>"<h1><a href=\"https://www.facebook.com/profile.php?id=100017178671075\"><strong>Hello World</strong></a></h1>", "all_tags"=>"Fuck"}, "commit"=>"Изменить статью", "locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = $1 ORDER BY "tags"."id" ASC LIMIT $2[0m  [["name", "Fuck"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fuck"], ["created_at", "2018-04-14 10:37:03.696627"], ["updated_at", "2018-04-14 10:37:03.696627"]]
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 15]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "taggings" ("post_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["post_id", 15], ["tag_id", 1], ["created_at", "2018-04-14 10:37:03.767578"], ["updated_at", "2018-04-14 10:37:03.767578"]]
+  [1m[35m (53.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/15
+Completed 302 Found in 147ms (ActiveRecord: 60.5ms)
+
+
+Started GET "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:37:03 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 70ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-14 13:37:16 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (1.7ms)
+  Rendered posts/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 71ms (Views: 55.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru/posts/15/edit" for 127.0.0.1 at 2018-04-14 13:38:07 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 15]]
+  Rendered posts/_form.html.erb (5.9ms)
+  Rendered posts/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:38:13 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BGCx9dkYBiZV4+YYtyX55/l7E72503dEMLjLeOa4e6QySlayQ+/imkMh0QCRPaW76XUZRo14rETy+HCRCJjzCg==", "post"=>{"title"=>"tEST", "sumary"=>"tEST", "body"=>"<h1><a href=\"https://www.facebook.com/profile.php?id=100017178671075\"><strong>Hello World</strong></a></h1>", "all_tags"=>"Fuck"}, "commit"=>"Изменить статью", "locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = $1 ORDER BY "tags"."id" ASC LIMIT $2[0m  [["name", "Fuck"], ["LIMIT", 1]]
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 15]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/15
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/ru/posts/15" for 127.0.0.1 at 2018-04-14 13:38:13 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
