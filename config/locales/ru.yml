@@ -6,7 +6,7 @@ ru:
     index:
       title: 'Статьи'
     new:
-      title: 'Новая домашка'
+      title: 'Новая статья'
     edit:
       title: 'Изменить статью'
     form:
