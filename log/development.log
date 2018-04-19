@@ -6402,3 +6402,72 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 131ms (Views: 118.2ms | ActiveRecord: 8.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-15 14:22:09 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 16]]
+  Rendered collection of posts/_post.html.erb [1 times] (32.8ms)
+  Rendered posts/index.html.erb within layouts/application (54.9ms)
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY name, taggings.tag_id[0m
+Completed 200 OK in 300ms (Views: 275.0ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-15 14:22:15 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 16]]
+  Rendered collection of posts/_post.html.erb [1 times] (6.8ms)
+  Rendered posts/index.html.erb within layouts/application (19.6ms)
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY name, taggings.tag_id[0m
+Completed 200 OK in 94ms (Views: 84.4ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2018-04-15 14:22:19 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 16]]
+  Rendered collection of posts/_post.html.erb [1 times] (6.4ms)
+  Rendered posts/index.html.erb within layouts/application (10.5ms)
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY name, taggings.tag_id[0m
+Completed 200 OK in 74ms (Views: 70.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2018-04-15 14:22:22 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.8ms)
+  Rendered posts/new.html.erb within layouts/application (8.4ms)
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY name, taggings.tag_id[0m
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-15 18:44:39 +0300
+  [1m[35m (20.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (84.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (34.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 16]]
+  Rendered collection of posts/_post.html.erb [1 times] (210.9ms)
+  Rendered posts/index.html.erb within layouts/application (491.6ms)
+  [1m[36mTag Load (19.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY name, taggings.tag_id[0m
+Completed 200 OK in 2448ms (Views: 2199.2ms | ActiveRecord: 152.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 21:38:59 +0300
+  [1m[35m (85.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (347.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (34.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 16]]
+  Rendered collection of posts/_post.html.erb [1 times] (216.8ms)
+  Rendered posts/index.html.erb within layouts/application (1112.0ms)
+  [1m[36mTag Load (29.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY name, taggings.tag_id[0m
+Completed 200 OK in 1935ms (Views: 1217.8ms | ActiveRecord: 430.9ms)
+
+
